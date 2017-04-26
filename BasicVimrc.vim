@@ -102,7 +102,7 @@ set completeopt=menu
 set number
 set numberwidth=5
 set lines=40
-set columns=200
+set columns=180
 "gvim下字体
 if has("win32")
     set guifont=FreeMono:h11
@@ -139,8 +139,8 @@ set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab
 "set noexpandtab tabstop=4 shiftwidth=4
 
 "空格折叠
-set foldenable 
-set foldmethod=indent 
+set foldenable
+set foldmethod=indent
 set foldnestmax=10
 set foldlevel=10
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc':'zo')<CR> 

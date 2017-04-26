@@ -8,16 +8,16 @@
 * and useful tools such as tagbar/DoxygenToolkit/nerdcommenter/indentLine/ctrlp/silversearcher...
 
 #### Installation
-1. Download the package to local ~/.vim: <code>git clone https://github.com/zhaochenyou/vimrc.git ~/.vim</code>
-2. Then install VundleVim/Vundle.vim: <code>git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim</code>
+1. Download the package to local ~/.vim: ```git clone https://github.com/zhaochenyou/vimrc.git ~/.vim```
+2. Then install VundleVim/Vundle.vim: ```git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
 3. There are several versions of .vimrc:
     1. BasicVimrc.vim           - basic vim configure with no plugins.
     2. FullVimrc.vim             - full box of plugins.
 
-<p>Copy one of them to ~/.vimrc, open vim and type <code>":PluginInstall"</code></p>
-<p>Copy '.ycm_extra_conf.py' to project root directory, and modify the 'flags' to fit.</p>
-<p></p>
-<p>Have fun.</p>
+Copy one of them to ~/.vimrc, open vim and type ```:PluginInstall```<br/>
+Copy '.ycm_extra_conf.py' to project root directory, and modify the 'flags' to fit.<br/>
+<br/>
+Have fun.<br/>
 
 
 --------
@@ -110,7 +110,17 @@ ctrl+p : find file
 :Ag+text : find 'text' in all files
 ```
 
-14. vim-repeat.vim - search text in files
+14. vimfiler.vim - file exploror
 ```
-:Ag+text : find 'text' in all files
+F8 : open/close exploror window
+```
+
+14. vim-multiple-cursors - file exploror
+```
+F8 : open/close exploror window
+```
+
+15. emmet - html/css fast writer
+```
+TODO
 ```
