@@ -125,12 +125,15 @@ let g:ycm_filetype_blacklist = {
 \  'tagbar' : 1,
 \  'nerdtree' : 1,
 \}
-" YCM need python2 or python3
-"let g:ycm_path_to_python_interpreter='/usr/bin/python'
-let g:ycm_path_to_python_interpreter='C:/software/Python27/python'
-" complete by python2 or python3
-"let g:ycm_python_binary_path='/usr/bin/python'
-let g:ycm_python_binary_path='C:/software/Python27/python'
+if has("win32")
+    " YCM need python2 or python3
+    let g:ycm_path_to_python_interpreter='C:/software/Python27/python'
+    " complete by python2 or python3
+    let g:ycm_python_binary_path='C:/software/Python27/python'
+else
+    let g:ycm_path_to_python_interpreter='/usr/bin/python3'
+    let g:ycm_python_binary_path='/usr/bin/python3'
+endif
 let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_global_extra_conf.py'
 let g:ycm_show_diagnostics_ui=0
 let g:ycm_register_as_syntastic_checker=0
@@ -150,8 +153,11 @@ let g:ycm_key_list_previous_completion=['<c-p>', '<Up>' ]
 let python_highlight_all = 1
 " for rust
 " install rust-src on windows: rustup component add rust-src
-let g:ycm_rust_src_path = '/usr/local/rust/rustc-1.5.0/src'
-let g:ycm_rust_src_path = 'C:/Users/linrongbin/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/src/rust/src'
+if has("win32")
+    let g:ycm_rust_src_path = '$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src'
+else
+    let g:ycm_rust_src_path = 'C:/Users/linrongbin/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/src/rust/src'
+endif
 "" ---- YouCompleteMe ----
 
 
