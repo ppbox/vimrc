@@ -102,7 +102,7 @@ set completeopt=menu
 set number
 set numberwidth=5
 set lines=40
-set columns=180
+set columns=175
 "gvim下字体
 if has("win32")
     set guifont=FreeMono:h11
