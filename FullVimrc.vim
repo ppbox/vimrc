@@ -211,8 +211,10 @@ let g:vimfiler_tree_closed_icon = ">"
 let g:vimfiler_readonly_file_icon = "*"
 let g:vimfiler_file_icon = '-'
 let g:vimfiler_marked_file_icon = 'Y'
+let g:vimfiler_ignore_pattern = ''
 " toggle to open explorer and close it
 nmap <F8> :VimFilerExplorer<cr>
+autocmd VimEnter * VimFiler -split -simple -winwidth=40 -winminwidth=40
 " call VimFiler when start
 " ---- vimfiler ----
 
