@@ -208,13 +208,26 @@ let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_tree_leaf_icon = "¦"
 let g:vimfiler_tree_opened_icon = "v"
 let g:vimfiler_tree_closed_icon = ">"
-let g:vimfiler_readonly_file_icon = "*"
+let g:vimfiler_readonly_file_icon = "x"
 let g:vimfiler_file_icon = '-'
-let g:vimfiler_marked_file_icon = 'Y'
+let g:vimfiler_marked_file_icon = '*'
 let g:vimfiler_ignore_pattern = ''
+let g:vimfiler_safe_mode_by_default= 0
+call vimfiler#custom#profile('default', 'context', {
+            \  'safe': 0,
+            \  'explorer': 1,
+            \  'winwidth': 35,
+            \  'split': 1,
+            \  'direction': 'topleft',
+            \  'auto_expand': 1,
+            \  'no_quit': 1,
+            \  'force_hide': 1,
+            \  'parent': 0,
+            \  'toggle': 1,
+            \ })
 " toggle to open explorer and close it
 nmap <F8> :VimFilerExplorer<cr>
-autocmd VimEnter * if !argc() | VimFiler | endif
+" autocmd VimEnter * if !argc() | VimFiler | endif
 " call VimFiler when start
 " ---- vimfiler ----
 
