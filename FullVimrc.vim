@@ -214,7 +214,7 @@ let g:vimfiler_marked_file_icon = 'Y'
 let g:vimfiler_ignore_pattern = ''
 " toggle to open explorer and close it
 nmap <F8> :VimFilerExplorer<cr>
-autocmd VimEnter * VimFiler -split -simple -winwidth=40 -winminwidth=40
+autocmd VimEnter * if !argc() | VimFiler | endif
 " call VimFiler when start
 " ---- vimfiler ----
 
