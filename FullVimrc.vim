@@ -206,27 +206,39 @@ let g:vim_markdown_conceal = 0
 
 " ---- vimfiler ----
 let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_tree_leaf_icon = "¦"
-let g:vimfiler_tree_opened_icon = "v"
-let g:vimfiler_tree_closed_icon = ">"
-let g:vimfiler_readonly_file_icon = "x"
-let g:vimfiler_file_icon = '-'
-let g:vimfiler_marked_file_icon = '*'
 let g:vimfiler_ignore_pattern = ''
 let g:vimfiler_safe_mode_by_default= 0
+let g:vimfiler_tree_indentation = 2
 call vimfiler#custom#profile('default', 'context', {
-            \  'explorer': 1,
             \  'split': 1,
-            \  'winwidth': 35,
+            \  'explorer': 1,
+            \  'columns': 40,
+            \  'explorer-columns': 40,
             \  'direction': 'topleft',
             \  'auto_expand': 1,
             \  'no_quit': 1,
             \  'force_hide': 0,
-            \  'parent': 0,
             \  'toggle': 1,
+            \  'parent': 1,
             \ })
 " toggle to open explorer and close it
-nmap <F8> :VimFilerExplorer<cr>
+" make sure the raw window is 90
+" tagbar, vimfiler is 40
+" when open one of them, width goto 130
+" when both of them, width goto 170
+let g:vimfiler_opened_flag = 0
+function AdjustVimFilerWidth()
+    if g:vimfiler_opened_flag == 0
+        let g:vimfiler_opened_flag=1
+        set columns=170
+    else
+        let g:vimfiler_opened_flag=0
+        set columns=130
+    endif
+endfunction
+nmap <F8> :VimFilerExplorer<cr>:call AdjustVimFilerWidth()<cr>
+" :VimFilerExplorer<cr>:call AdjustVimFilerWidth()<cr>
+
 " autocmd VimEnter * if !argc() | VimFiler | endif
 " call VimFiler when start
 " ---- vimfiler ----
