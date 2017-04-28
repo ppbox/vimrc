@@ -60,9 +60,9 @@ Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'hdima/python-syntax'
 " rust
 Plugin 'rust-lang/rust.vim'
-Plugin 'phildawes/racer'
+" Plugin 'phildawes/racer' ycm support it
 " golang
-Plugin 'fatih/vim-go'
+" Plugin 'fatih/vim-go'
 " markdown
 Plugin 'plasticboy/vim-markdown'
 " thrift
@@ -214,14 +214,13 @@ let g:vimfiler_marked_file_icon = '*'
 let g:vimfiler_ignore_pattern = ''
 let g:vimfiler_safe_mode_by_default= 0
 call vimfiler#custom#profile('default', 'context', {
-            \  'safe': 0,
             \  'explorer': 1,
-            \  'winwidth': 35,
             \  'split': 1,
+            \  'winwidth': 35,
             \  'direction': 'topleft',
             \  'auto_expand': 1,
             \  'no_quit': 1,
-            \  'force_hide': 1,
+            \  'force_hide': 0,
             \  'parent': 0,
             \  'toggle': 1,
             \ })

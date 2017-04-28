@@ -42,25 +42,31 @@ ctrl+\+f : find f     find file
 
 3. YouCompleteMe - code completion
 ```
-ctrl+] :      go to definition or declaration
-ctrl+n :      select next when autocomplete
-ctrl+p :      select prev when autocomplete
+ctrl+] : go to definition or declaration
+ctrl+n : select next when autocomplete
+ctrl+p : select prev when autocomplete
 ```
 
 4. ultisnips - code snippets
 ```
-ctrl+k :      expand snippets
-ctrl+e :      list all snippets
+ctrl+k : expand snippets
+ctrl+e : list all snippets
 ```
 
 5. tagbar - function declaration list
 ```
-F9 :          open/close tagbar
+F9 : open/close tagbar
 ```
 
 6. vimfiler - file exploror
 ```
-F8 :          open/close vimfiler
+F8 : open/close vimfiler
+K : create new directory
+N : create new file
+m : move file
+c : copy file
+d : delete file
+r : rename file
 ```
 
 7. Mark--Karkat - highlight word
