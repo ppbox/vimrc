@@ -65,8 +65,8 @@ K : create new directory
 N : create new file
 m : move file
 c : copy file
-d : delete file
-r : rename file
+d : delete file/directory
+r : rename file/directory
 ```
 
 7. Mark--Karkat - highlight word
@@ -114,11 +114,6 @@ ctrl+p : find file
 13. ag.vim - search text in files
 ```
 :Ag+text : find 'text' in all files
-```
-
-14. vimfiler.vim - file exploror
-```
-F8 : open/close exploror window
 ```
 
 14. vim-multiple-cursors - file exploror
