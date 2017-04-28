@@ -228,12 +228,21 @@ call vimfiler#custom#profile('default', 'context', {
 " when both of them, width goto 170
 let g:vimfiler_opened_flag = 0
 function AdjustVimFilerWidth()
+    let tagbar_opened_flag = bufwinnr('__Tagbar__') != -1
     if g:vimfiler_opened_flag == 0
         let g:vimfiler_opened_flag=1
-        set columns=170
+        if tagbar_opened_flag
+            set columns=170
+        else
+            set columns=130
+        endif
     else
         let g:vimfiler_opened_flag=0
-        set columns=130
+        if tagbar_opened_flag
+            set columns=130
+        else
+            set columns=90
+        endif
     endif
 endfunction
 nmap <F8> :VimFilerExplorer<cr>:call AdjustVimFilerWidth()<cr>
