@@ -62,7 +62,7 @@ Plugin 'hdima/python-syntax'
 Plugin 'rust-lang/rust.vim'
 " Plugin 'phildawes/racer' ycm support it
 " golang
-" Plugin 'fatih/vim-go'
+Plugin 'fatih/vim-go'
 " markdown
 Plugin 'plasticboy/vim-markdown'
 " thrift
@@ -128,9 +128,9 @@ let g:ycm_filetype_blacklist = {
 \}
 if has("win32")
     " YCM need python2 or python3
-    let g:ycm_path_to_python_interpreter='C:/software/Python27/python'
+    let g:ycm_path_to_python_interpreter='C:/Program Files/Python36/python'
     " complete by python2 or python3
-    let g:ycm_python_binary_path='C:/software/Python27/python'
+    let g:ycm_python_binary_path='C:/Program Files/Python36/python'
 else
     let g:ycm_path_to_python_interpreter='/usr/bin/python3'
     let g:ycm_python_binary_path='/usr/bin/python3'
@@ -155,9 +155,9 @@ let python_highlight_all = 1
 " for rust
 " install rust-src on windows: rustup component add rust-src
 if has("win32")
-    let g:ycm_rust_src_path = '$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src'
+    let g:ycm_rust_src_path = '$HOME/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/src/rust/src'
 else
-    let g:ycm_rust_src_path = 'C:/Users/linrongbin/.rustup/toolchains/stable-x86_64-pc-windows-msvc/lib/rustlib/src/rust/src'
+    let g:ycm_rust_src_path = '$HOME/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src'
 endif
 "" ---- YouCompleteMe ----
 
