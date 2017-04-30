@@ -60,7 +60,8 @@ Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'hdima/python-syntax'
 " rust
 Plugin 'rust-lang/rust.vim'
-" Plugin 'phildawes/racer' ycm support it
+" ycm support racer
+Plugin 'phildawes/racer' 
 " golang
 Plugin 'fatih/vim-go'
 " markdown
